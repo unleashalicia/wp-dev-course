@@ -17,21 +17,22 @@
 
     <?php
 
-      // Create an array of post objects using the display_post function
-      $posts = array(
-        'Hello World',
-        'PHP for WordPress',
-        'WP Development'
-      );
+      // Create an array of post objects using the create_post function
+      $post_titles = [
+        "Alicia is cool.",
+        "See?  So cool.",
+        "I told ya so."
+      ];
 
 
       // Loop through array of posts and display each one on the page
-      foreach( $posts as $post ) {
+
+      foreach($post_titles as $post_title) {
+        display_post($post_title);
+      }
 
         // Call the display_post function and pass it the $post
-        display_post( $post );
 
-      }
 
       /**
        * Custom function for displaying the title and content for a post
@@ -41,7 +42,7 @@
       function display_post( $title ) {
 
         // Echo an <h3> tag with the $title inside
-        echo "<h3><a href=\"#\">$title</a></h3>";
+        echo "<h3>$title</h3>";
 
       }
 
